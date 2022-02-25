@@ -18,7 +18,7 @@ class CambioImagenPage extends StatelessWidget{
             children: [
               IconButton(
                 onPressed:() {
-                  _.cambioFoto(0);
+                  _.cambioAtras();
                 } , 
                 icon: const Icon(
                   Icons.arrow_back,
@@ -31,7 +31,7 @@ class CambioImagenPage extends StatelessWidget{
               ),
               IconButton(
                 onPressed:() {
-                  _.cambioFoto(1);
+                  _.cambioAdelante(1);
                 } , 
                 icon: const Icon(
                   Icons.arrow_forward,

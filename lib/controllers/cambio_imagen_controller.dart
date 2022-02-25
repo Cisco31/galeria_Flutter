@@ -4,7 +4,7 @@ class CambioImagenController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    cambioFoto(0);
+    cambioAdelante(0);
   }
 
   List<String> fotos =['https://m.media-amazon.com/images/I/5101NtSnx0L._AC_.jpg',
@@ -36,23 +36,26 @@ class CambioImagenController extends GetxController {
     update();
   }*/
 
-  void cambioFoto(int valor){
+  void cambioAdelante(int numero){
     urlImg = fotos.first;
-    if (valor == 1) {
+    if (numero == 1) {
       if (foto == 9) {
         foto = 0;
       } else {
         foto++;
       }
       urlImg = fotos[foto];
-    } else {
+    }
+    update();
+  }
+  
+  void cambioAtras(){
       if (foto == 0) {
         foto = 9;
       } else {
         foto--;
       }
       urlImg = fotos[foto];
-    }
     update();
   }
 
